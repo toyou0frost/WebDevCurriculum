@@ -19,29 +19,52 @@
 	</head>
 	<body>
 		<section class="row1">
-			<div class="square"></div>
-			<div class="square"></div>
-			<div class="square"></div>
-			<div class="square"></div>
+			<div class="square" onclick="ColorChange1()"></div>
+			<div class="square" onclick="ColorChange1()"></div>
+			<div class="square" onclick="ColorChange1()"></div>
+			<div class="square" onclick="ColorChange1()"></div>
 		</section>
 
 		<section class="row2">
-			<div class="square"></div>
-			<div class="square"></div>
-			<div class="square"></div>
-			<div class="square"></div>
+			<div class="square" onclick="ClassChange1()"></div>
+			<div class="square" onclick="ClassChange1()"></div>
+			<div class="square" onclick="ClassChange1()"></div>
+			<div class="square" onclick="ClassChange1()"></div>
 		</section>
 
 		<script>
-			let row1Squares = document.querySelectorAll('.row1 .square');
-			for(let node of row1Squares) {
-				/* TODO: node 변수를 어떻게 조작해야 할까요? */
+			function ColorChange1(){
+				let row1Squares = document.querySelectorAll('.row1 .square');
+				for(let node of row1Squares) {
+					/* TODO: node 변수를 어떻게 조작해야 할까요? */
+					if(node.style.backgroundColor == "yellow"){
+						node.style.backgroundColor = "white"
+					}
+					else{
+						node.style.backgroundColor = "yellow"
+					}
+				}
+			}
+			function ClassChange1(){
+				let row2Squares = document.querySelectorAll('.row2 .square');
+				for(let node of row2Squares) {
+					/* TODO: node 변수를 어떻게 조작해야 할까요? */
+					node.className = "enabled"
+				}
+			}
+			/*let res = ""
+			let star = prompt("높이 입력 : ")
+			for(let i = 0; i < star; i++){ // 1 3 5 7 9 i = 0 1 2 3 4
+				for(let j = star; j > i; j--){
+					res += " ";
+				}
+				for(let j = 0; j < 1 + 2 * i; j++){
+					res += "*";
+				}
+				res += "\n";
 			}
 
-			let row2Squares = document.querySelectorAll('.row2 .square');
-			for(let node of row2Squares) {
-				/* TODO: node 변수를 어떻게 조작해야 할까요? */
-			}
+			console.log(res)*/
 		</script>
 	</body>
 </html>
